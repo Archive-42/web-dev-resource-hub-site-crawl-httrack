@@ -1,0 +1,1155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- saved from url=(0138)file:///C:/Users/bryan/OneDrive/Documents/a-A-October/00-REPOSITORY/00-weeks/04-module-4/week-10/resources/general/Database+Primer.doc.htm -->
+<html>
+  
+<!-- Mirrored from goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/database+primer by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Jan 2021 01:43:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-16LE">
+    <meta name="Generator" content="Microsoft Word 15 (filtered)">
+
+<style>
+  html {
+    background: url(https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/double-bubble-outline/double-bubble-outline/double-bubble-outline.png)
+      no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  <style>body {width: 500px;}</style>
+
+<script async defer type="application/javascript">
+  function $init() {return true;}
+</script>
+
+
+
+
+
+  <p checked class="title" id="Database Primer">Data Base Primer</p>
+  <!-- here goes the rest of the page -->
+
+
+<title>Database Primer</title>
+<link rel="stylesheet" href="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/dbstyle.css">
+<link rel="stylesheet" href="https://goofy-euclid-1cd736.netlify.app/core-site/css/bootstrap.css">
+    <link rel="stylesheet" href="https://goofy-euclid-1cd736.netlify.app/core-site/css/font-awesome.min.css">
+
+
+
+
+</head>
+
+<!-------------------------END-OF-HEADER-------------------------->
+
+
+<body lang="EN-US" link="blue" vlink="purple" style="word-wrap:break-word">
+
+<div class="WordSection1">
+    <div id="home-link"> <a class="btn" href="https://goofy-euclid-1cd736.netlify.app/core-site/index.html">HOME-hit-Refresh</a></div>
+<h1>Database Primer</h1>
+
+<h1 id="DatabasePrimer-EntityRelationships">Entity Relationships</h1>
+
+<h2 id="DatabasePrimer-One-to-manyrelationship">One-to-many relationship</h2>
+
+<p>We have a company which manages multiple software projects. We hire people
+and assign them to projects. Consequently, each project will have several
+people working on it. From this statement, it is easy to observe that
+project-to-workers constitute a&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">one-to-many</span></code>&nbsp;relationship,
+i.e. multiple people work on one project.</p>
+
+<p>Note that in this relationship, we are assuming that one person may not work
+on more than one project.</p>
+
+<p>If we had to represent a&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">one-to-many</span></code>&nbsp;relationship
+in the relational database, it would do it like this:</p>
+
+<p class="MsoNormal"><img width="468" height="298" id="Picture 1" src="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/Database+Primer_files/image024.png"></p>
+
+<p>Notes:</p>
+
+<p style="margin-left:.5in;text-indent:-.25in">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>We only included a minimum set of fields to demonstrate the point of the
+current topic.</p>
+
+<p>Let us analyze this design.</p>
+
+<p>Each table&nbsp;<strong>must</strong>&nbsp;have a unique primary key. In
+both EMPLOYEE table and PROJECT tables, this field is named "ID".
+There are times when the primary key is made up of multiple keys, referred to
+as "composite key", however, we will not consider this case here.</p>
+
+<p>For the EMPLOYEE&nbsp;table, we could have designated the SSN as the primary
+key since we know that the Social Security number would be unique. This would
+not be a great idea for at least two reasons:</p>
+
+<p style="margin-left:.5in;text-indent:-.25in">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>We may hire some foreign workers who do not have a Social Security
+number and whatever unique ID they may have, will likely not conform to the SSN
+format - "xxx-xx-xxxx".</p>
+
+<p style="margin-left:.5in;text-indent:-.25in">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>If we chose SSN to be the primary key, its datatype&nbsp; would be
+STRING. Primary keys are used for joining data from multiple tables. Joining on
+a field whose type is INTEGER is a lot faster than if its type were STRING.</p>
+
+<p>All databases have a SEQUENCE GENERATOR. We can designate the primary key as
+a SEQUENCE GENERATED key and the database will created it for us. Thus, when we
+try to insert our first employee into the PEOPLE table, it's ID will be 1.</p>
+
+<p>From EMPLOYEE and PROJECT tables above we can see that both have a primary
+key named "ID".</p>
+
+<p>To express the&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">one-to-many</span></code>&nbsp;relationship,
+the EMPLOYEE table also has a key named "PROJECT_ID". The PROJECT_ID
+is a&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">foreign</span></code>&nbsp;key.
+A&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">foreign</span></code>&nbsp;key is
+the primary key of another table, in this case table PROJECT.</p>
+
+<p>From the demonstration above, we can see that people whose IDs are 1 &amp; 2
+work for project ID=1, people with IDs 3, 4, and 5 work for project ID=2, etc.</p>
+
+<p>The&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">one-to-many</span></code>&nbsp;(or&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">many-to-one</span></code>) relationships are
+incredibly common.&nbsp;</p>
+
+<p>Consider another situation where we want to store information about each
+employee. In addition to the obvious fields such as "First Name",
+"Last Name", "SSN", each employee also has a phone number,
+email address, and residence address. However, many employees will have more
+than one phone number, email address, and may have multiple residences. The
+only logical way to represent this would be with a&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">one-to-many</span></code>&nbsp;relationship:</p>
+
+<p class="MsoNormal"><img width="468" height="132" id="Picture 2" src="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/Database+Primer_files/image025.png"></p>
+
+<h2>One-to-one relationship</h2>
+
+<p> <code class="language-javascript"><span style="font-size:10.0pt">One-to-on</span></code>e relationships
+are less common than&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">many-to-one</span></code>&nbsp;but
+they are still used very extensively. Lets go back to the task of storing data
+for each employee. In addition to storing employee's name, phone-numbers, etc.,
+we also want to store employee's salary, start and end date (end data would be
+set to null for current employees), and other sensitive information. SSN field
+may also be considered sensitive data. While many applications will need access
+to employee's general information, such as name, department number, title,
+etc., only HR applications that are entrusted to few employees should have
+access to sensitive data, such as employee's salary.&nbsp;</p>
+
+<p>Each database table can have associated privileges indicating who can see
+and modify data. Thus, we can create other tables for storing employee's
+sensitive data and assign privileges to this table to select few.</p>
+
+<p>The&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">one-to-one</span></code>&nbsp;relationships
+are represented the same as the <code class="language-javascript"><span style="font-size:10.0pt">&nbsp;many-to-many</span></code>&nbsp;relationships,
+that is with a&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">foreign</span></code>&nbsp;key.</p>
+
+<p class="MsoNormal"><img width="468" height="161" id="Picture 3" src="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/Database+Primer_files/image026.png"></p>
+
+<p>Note:</p>
+
+<p style="margin-left:.5in;text-indent:-.25in">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>EMPLOYEE_ID in EMPLOYEE_HR table is the foreign key. It contains values
+from <a class="btn" href="http://employee.id/">EMPLOYEE.ID</a> field.</p>
+
+<p style="margin-left:.5in;text-indent:-.25in">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Unlike the primary key, a foreign need need not (and usually will not)
+be unique and it may be null.</p>
+
+<p style="margin-left:.5in;text-indent:-.25in">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>In the case of a&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">one-to-one</span></code>&nbsp;relationship,
+we could have placed the "foreign" key in either table.</p>
+
+<p>For example, our design could look like this, where we place the foreign key
+- EMPLOYEE_HR_ID in the EMPLOYEE table.</p>
+
+<p class="MsoNormal"><img border="0" width="468" height="164" id="Picture 4" src="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/Database+Primer_files/image027.png"></p>
+
+<p>However, since most people in the organization will be privy to data in the
+EMPLOYEE table, and only people who work in HR will be able to see the
+EMPLOYEE_HR table, it is better to place the foreign key into
+the&nbsp;EMPLOYEE_HR table so that those who examine contents of the EMPLOYEE
+table would not even know that EMPLOYEE_HR table exists.</p>
+
+<p>There are other reasons to create&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">one-to-one</span></code>&nbsp;relationships.</p>
+
+<p>Let's say we also want to store a single hobby for our employees. The
+description of a hobby may contain many fields. Most employees are very boring
+and do not have any hobbies. If we added Hobby fields to the EMPLOYEE table,
+most records would contain "holes", i.e. empty values. Thus, we can
+make a decision to define a HOBBY table and link it to EMPLOYEE with a&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">one-to-one</span></code>&nbsp;relationship.</p>
+
+<h2 id="DatabasePrimer-Many-to-manyrelationship">Many-to-many relationship</h2>
+
+<p>Next, we expand our original definition by allowing one person to work on
+many projects. For example, some person may dedicate 60% of his time working on
+project&nbsp;#1 and 40% working on project #2. Any one person may work on more
+than two projects. Following this rule, we progress from a&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">one-to-many</span></code>&nbsp;relationship to a&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">many-to-many</span></code>&nbsp;relationship. In
+this&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">many-to-many</span></code>&nbsp;relationship,
+we have many people working on one project and each person may work on many
+projects. To support the many-to-many relationship, we need to introduce a new
+"MAPPING" table.</p>
+
+<p class="MsoNormal"><img border="0" width="468" height="165" id="Picture 5" src="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/Database+Primer_files/image028.png"></p>
+
+<p>Note that table PROJECT_WORKER_MAP, maps Projects to Employees (Workers).
+For example,</p>
+
+<p class="MsoNormal"><img border="0" width="468" height="263" id="Picture 6" src="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/Database+Primer_files/image029.png"></p>
+
+<p>From the PROJECT_EMPLOYEE_MAP table we can see that employees with IDs 1 and
+2 work on project 1, employee with IDs 2, 4, and 5 work on project 2, employees
+with IDs 1, 7, and 8 work on project 3, etc. We can also observe that employee
+with ID 2 works on projects 1 and 2, employee with ID 1 works on projects 1 and
+3.</p>
+
+<p>With&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">many-to-many</span></code>&nbsp;relationships,
+it is quite possible to have some employees who do not work on any projects,
+let's say that an active employee goes on a sabbatical and will not be involved
+on any project. It is also possible to have a project that does not have any
+employees, for example, an upstart project that is still in the research phase.
+In cases where employees are not assigned to any projects or project do not
+have any employees, the PROJECT_EMPLOYEE_MAP table will not have a row for
+associating employee to a project.</p>
+
+<p>Note that in the example above, no employee is assigned to project ID=5 and
+Employee ID=9 does not work on any projects.</p>
+
+<h1 id="DatabasePrimer-DatabaseCommands-DDLandDML">Database Commands - DDL and
+DML</h1>
+
+<p>All databases support two types of commands: DDL that stands for Data
+Definition Language and DML that stands for Data Manipulation Language.</p>
+
+<h2 id="DatabasePrimer-DDLCommands">DDL Commands</h2>
+
+<p>The list of DDL commands is exhaustive. You use DDL commands to created and
+alter tables and indexes, drop (i.e. delete) tables, manage privileges, and
+much-much more.</p>
+
+<h3 id="DatabasePrimer-CreateTable">Create Table</h3>
+
+<p>Before we can execute any database commands we need to create required
+tables and populate them with data. Let us examine the CREATE TABLE command:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">create table worker (</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id integer not&nbsp;null,</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;created_by varchar(255),</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in_utc timestamp not&nbsp;null,</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;last_modified_by varchar(255),</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out_utc timestamp,</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audit_id varchar(255),</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;compensation&nbsp;double&nbsp;not&nbsp;null,</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;worker_code varchar(255),</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;worker_name varchar(255),</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;primary key (id)</pre><pre>);</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p>The WORKER table in our real project has following fields:</p>
+
+<p class="MsoNormal"><img border="0" width="468" height="57" id="Picture 7" src="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/Database+Primer_files/image030.png"></p>
+
+<p>Each field is listed along with its datatype. For STRING fields (i.e.
+varchar) we also need to specify maximum length.</p>
+
+<p>Some fields may require a value, i.e. may not contain nulls. For
+example,&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">"compensation double
+not null"</span></code></p>
+
+<p>One or more fields must be designated as primary. ( <code class="language-javascript"><span style="font-size:10.0pt">primary key (id)</span></code>). A Primary key in
+unique and non-nullable by definition.</p>
+
+<h3 id="DatabasePrimer-IndicesandUniqueIndices">Indices and Unique Indices</h3>
+
+<p>Databases support many types of indices and we can't cover this topic
+exhaustively. Let's first discuss an index in a general sense.</p>
+
+<p>Suppose we have an ORDERS table with 1,000,000 rows. We may want to perform
+certain types of operations on the ORDERS table very frequently. For example,
+find order where SELLER_NAME is "One First". With 1M rows, we would
+have to check 1M records in the worst case (order O(n)).</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">SELECT *</pre><pre>FROM ORDERS</pre><pre>WHERE SELLER_NAME =&nbsp;'One First'</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p>However, if we create an index for field SELLER_NAME, we would be able to
+locate this record in almost constant time (O(1)).</p>
+
+<p>The DDL command to create an index may look like this:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">CREATE INDEX INDEX_SELLER_NAME</pre><pre>ON ORDERS(SELLER_NAME)</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p>One of the common interview questions goes something like this:</p>
+
+<p>"You work on your application and test it continuously in your dev
+(development) environment. Everything works great so you decide to deploy it to
+the production environment. However, in production, your application's
+performance becomes very sluggish. Why is that?"</p>
+
+<p>Your answer may be as follows:</p>
+
+<p>"It is quite possible that the dev database has been property tuned
+with required indices and it is therefore performant. However, production
+environments uses a different database and it is possible that it does not have
+all the required indices".</p>
+
+<p>In addition to a simple index, databases support a notion of a&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">unique index</span></code>.</p>
+
+<p>Let's say that we want our database to enforce business rules and one of our
+business rules is that the combination of values in&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">audit_id</span></code>&nbsp;and&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">out_utc</span></code>&nbsp;fields must be unique.
+Thus, it would be an error if two records had same values in both&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">audit_id</span></code>&nbsp;and&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">out_utc</span></code>&nbsp;fields. The DDL command for
+a unique index would look like this:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">create unique index UKbe6uin1lttt8dh3oddmrb6g6d on worker (audit_id, out_utc);</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p>The name of the index (" <code class="language-javascript"><span style="font-size:10.0pt">UKbe6uin1lttt8dh3oddmrb6g6d</span></code>"
+in the example above) was randomly generated and the name itself is not
+important. The only thing that is important is to identify a set&nbsp; of
+fields that must be unique.</p>
+
+<h3 id="DatabasePrimer-Constraints">Constraints</h3>
+
+<p>Let's go back to our&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">many-to-many</span></code>&nbsp;illustration
+and consider what would happen if someone decided to delete an employee with
+ID=1</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">delete from employee where id =&nbsp;1</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p>We would be left with records in table PROJECT_EMPLOYEE_MAP that would not
+make sense. (See records with ID 1 and 6 where the EMPLOYEE_ID is 1 which was
+deleted)</p>
+
+<p class="MsoNormal"><img border="0" width="468" height="263" id="Picture 8" src="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/Database+Primer_files/image031.png"></p>
+
+<p>We can still delete employee with ID=1, however, we first need to delete
+records from the&nbsp;PROJECT_EMPLOYEE_MAP table that associate employee ID=1
+with projects. This constraint can be enforced with command:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">alter table project_worker_map add constraint FK6baomleyjvq2jkfy8n5tscn0l foreign key (worker_id) references worker;</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p>There are too many DDL commands and it is not important to know them all,
+only to know that they exist and can be easily discovered. Most of the common
+DDL commands affect tables and indices, such as:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">create table ...</pre><pre>alter table ...</pre><pre>drop table ...</pre><pre>create index ...</pre><pre>create unique index ...</pre><pre>drop index ...</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<h3 id="DatabasePrimer-Privileges">Privileges</h3>
+
+<p>We had mentioned earlier the need for a one-to-one relationship. In that
+example, we decided to store sensitive employee information inside EMPLOYEE_HR
+table, accessible to HR staff only. For people working in HR who do need this
+access, we can assign them to a user (or group) with a special name, i.e.
+USER_HR. Then, we can execute the following command:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">GRANT ALL ON TABLE EMPLOYEE_HR TO USER USER_HR</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p>One may think that knowing the syntax of this command might allow you to
+peek at other employee's salary. However, only database admins, or other users
+with special privileges, would be able to execute the GRANT command.</p>
+
+<h2 id="DatabasePrimer-DMLCommands">DML Commands</h2>
+
+<p>The good news about Data manipulation commands (DML) is that they comprise
+only four commands: INSERT, UPDATE, DELETE, and SELECT. In the industry, these
+are often referred to as CRUD commands for Create, Read, Update, Delete.</p>
+
+<p>The bad news is that some of these commands, particularly SELECT could get very
+complex. In this document we will only cover the basics.</p>
+
+<h3 id="DatabasePrimer-INSERTCommand">INSERT Command</h3>
+
+<p>Most of the INSERT commands are very simple.</p>
+
+<p>For example:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="full-width">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">INSERT INTO WORKER(ID, AUDIT_ID, IN_UTC, OUT_UTC, WORKER_CODE, WORKER_NAME, COMPENSATION, CREATED_BY, LAST_MODIFIED_BY)</pre><pre>VALUES(1,&nbsp;'00000000-0000-0000-0000-000000000001', CURRENT_TIMESTAMP - CURRENT_TIMEZONE,&nbsp;'9999-12-31',&nbsp;'CODE-1',&nbsp;'One First',&nbsp;120000.00,&nbsp;'unknown',&nbsp;'unknown');</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p>This example could also be written like this:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="full-width">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">INSERT INTO WORKER VALUES(1,&nbsp;'00000000-0000-0000-0000-000000000001', CURRENT_TIMESTAMP - CURRENT_TIMEZONE,&nbsp;'9999-12-31',&nbsp;'CODE-1',&nbsp;'One First',&nbsp;120000.00,&nbsp;'unknown',&nbsp;'unknown');</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p>The reason why the above syntax would work is because we are populating
+every single field in the WORKER table. If we only wanted to populate some of
+the fields, we would need to list them, as in:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">INSERT INTO WORKER(ID, AUDIT_ID, WORKER_CODE, WORKER_NAME, COMPENSATION)</pre><pre>VALUES(1,&nbsp;'00000000-0000-0000-0000-000000000001',&nbsp;'CODE-1',&nbsp;'One First',&nbsp;120000.00);</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p>Note that if you don't specify a field inside the INSERT statement, that
+field must be nullable.</p>
+
+<h3 id="DatabasePrimer-UPDATECommand">UPDATE Command</h3>
+
+<p>To change values in an existing record we can do this:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">update worker</pre><pre>set compensation =&nbsp;200000,</pre><pre>worker_code =&nbsp;'CODE-X'</pre><pre>where id =&nbsp;3</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p>Naturally, this syntax could get a lot more complex and we will return to
+this command later.</p>
+
+<h3 id="DatabasePrimer-DELETECommand">DELETE Command</h3>
+
+<p>The simplest delete command looks like this:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt" data-highlight-colour="initial">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">delete from worker</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p>This command will delete all records from table WORKER.&nbsp;</p>
+
+<p>One of the common interview questions it to ask about the difference of
+this&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">delete</span></code>&nbsp;command
+and the&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">drop table</span></code>&nbsp;command:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 340.0px;"><col style="width: 340.0px;"></colgroup>
+ <tbody><tr>
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>DELETE</b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;border-left:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>DROP</b></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">delete from worker</pre></div>
+  </div>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">drop table worker</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p><span style="color:black">When you use the&nbsp;</span> <code class="language-javascript"><span style="font-size:10.0pt">delete</span></code>&nbsp;command, the table still
+exists but contains no records. When you&nbsp; <code class="language-javascript"><span style="font-size:
+10.0pt">drop</span></code>&nbsp;the table, the table is destroyed and you would
+need to create it again if you decide to add records to it.</p>
+
+<p>More often than not, we will add a condition to the delete command, for
+example:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="wide">
+ <colgroup><col style="width: 648.0px;"><col style="width: 312.0px;"></colgroup>
+ <tbody><tr>
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Command</b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;border-left:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Description</b></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">delete from worker where compensation &lt; 100000</pre></div>
+  </div>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p>Delete workers who make less than 100,000</p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">delete from worker where worker_code in ('CODE-1', 'CODE-2')</pre></div>
+  </div>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p>Delete workers with WORKER_CODE CODE-1 and CODE-2</p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<h3 id="DatabasePrimer-SELECTCommand"><span style="color:black">SELECT Command</span></h3>
+
+<p>This is where all the fun is. Many books and PhD decertations are dedicated
+to this topic. Let us start simple:</p>
+
+<p class="MsoNormal"><img border="0" width="468" height="301" id="Picture 9" src="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/Database+Primer_files/image032.png"><img border="0" width="468" height="179" id="Picture 10" src="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/Database+Primer_files/image033.png"></p>
+
+<p>Note:</p>
+
+<p style="margin-left:.5in;text-indent:-.25in">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>To select all fields use " <code class="language-javascript"><span style="font-size:10.0pt">select
+* ...</span></code>"</p>
+
+<p style="margin-left:.5in;text-indent:-.25in">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>We use " <code class="language-javascript"><span style="font-size:10.0pt">where</span></code>"
+to filter records to be displayed. Multiple expressions may be strung together
+with&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">and, or, in,</span></code>&nbsp;and
+other operators.</p>
+
+<p style="margin-left:.5in;text-indent:-.25in">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Note the usage of&nbsp;&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">like</span></code>&nbsp;operator</p>
+
+<p style="margin-left:.5in;text-indent:-.25in">4.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Aliases are often used with SELECT commands.</p>
+
+<h4 id="DatabasePrimer-GROUPBYandHAVINGClauses">GROUP BY and HAVING Clauses</h4>
+
+<p>Another powerful feature of SELECT is to aggregate records via GROUP BY.
+Let's start with example. We would like to find out how many people work on
+each project. We use the PROJECT_WORKER_MAP table to map workers to projects:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 340.0px;"><col style="width: 340.0px;"></colgroup>
+ <tbody><tr>
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Query</b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;border-left:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Response</b></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">select project_id, count(worker_id) as WorkerCount</pre><pre>from project_worker_map</pre><pre>group by project_id</pre></div>
+  </div>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">PROJECT_ID&nbsp;&nbsp; WORKERCOUNT&nbsp;</pre><pre>--------------------------</pre><pre>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre><pre>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</pre><pre>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p><span style="color:black">Suppose we are interested in seeing only those
+projec</span>ts where the worker count is greater than 2</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 340.0px;"><col style="width: 340.0px;"></colgroup>
+ <tbody><tr>
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Query</b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;border-left:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Response</b></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">select project_id, count(worker_id) as Worker_Count</pre><pre>from project_worker_map</pre><pre>group by project_id</pre><pre>having count(worker_id) &gt; 2</pre></div>
+  </div>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">PROJECT_ID&nbsp;&nbsp; WORKER_COUNT&nbsp;</pre><pre>---------------------------</pre><pre>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p><span style="color:black">Note:</span></p>
+
+<p> <code class="language-javascript"><span style="font-size:10.0pt">having</span></code>&nbsp;to&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">group by</span></code>&nbsp;is what&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">where</span></code>&nbsp;is to&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">select</span></code></p>
+
+<p>Above command is incredibly useful and you should store it somewhere in your
+memory bank. Often you run a process which will populate rows in some table. It
+may be an error to have records with a duplicate value in some field. Thus, you
+would execute the following query to check:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr>
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Query</b></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">select some_field</pre><pre>from some_table</pre><pre>group by some_field</pre><pre>having count(some_field) &gt; 1</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<h3 id="DatabasePrimer-JoiningTables">Joining Tables</h3>
+
+<p>Let us take a leap into something more interesting. We would like to
+determine the total compensations for each project. The compensation is
+specified in the WORKER table, so we need to join WORKER and PROJECT_WORKER_MAP
+tables.</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 340.0px;"><col style="width: 340.0px;"></colgroup>
+ <tbody><tr>
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Query</b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;border-left:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Result</b></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">select p.project_id, sum(w.compensation) as TotalComp</pre><pre>from worker w, project_worker_map p</pre><pre>where&nbsp; = p.worker_id</pre><pre>group by project_id</pre></div>
+  </div>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">PROJECT_ID&nbsp;&nbsp; TOTALCOMP</pre><pre>----------------------</pre><pre>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;310000.0</pre><pre>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;425000.0</pre><pre>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;735000.0</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p><span style="color:black">Let us obser</span>ve several things from above
+command:</p>
+
+<p>In group by selects, fields that are listed on the select clause must match
+fields that appear in the group by clause. However, the select clause may also
+specify aggregate operations such as SUM, AVG, and others.</p>
+
+<p>As a slight variation to above, let's say we only want to see projects whose
+total compensation is greater than 500,000.</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 340.0px;"><col style="width: 340.0px;"></colgroup>
+ <tbody><tr>
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Query</b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;border-left:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Result</b></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">select p.project_id, sum(w.compensation) as TotalComp</pre><pre>from worker w, project_worker_map p</pre><pre>where&nbsp; = p.worker_id</pre><pre>group by project_id</pre><pre>having sum(w.compensation) &gt; 500000</pre></div>
+  </div>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">PROJECT_ID&nbsp;&nbsp; TOTALCOMP</pre><pre>----------------------</pre><pre>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;735000.0</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p><span style="color:black">Notes:</span></p>
+
+<p>In the previous query, I used alias w for worker and p for
+project_worker_map. If I had not used aliases, I would need to type the full
+name of the table, as in:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 680.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">select project_worker_map.project_id, sum(worker.compensation)</pre><pre>from worker, project_worker_map</pre><pre>where worker = project_worker_map.worker_id</pre><pre>group by project_id</pre><pre>having sum(worker.compensation) &gt; 500000</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<h4 id="DatabasePrimer-MinandMax">Min and Max</h4>
+
+<p>These examples will be provided without explanations:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="default">
+ <colgroup><col style="width: 340.0px;"><col style="width: 340.0px;"></colgroup>
+ <tbody><tr>
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Query</b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;border-left:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Response</b></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">select max(compensation) as Max</pre><pre>from worker</pre></div>
+  </div>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">MAX&nbsp;&nbsp;&nbsp;&nbsp;</pre><pre>--------</pre><pre>240000.0</pre></div>
+  </div>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">select min(compensation) as Min</pre><pre>from worker</pre></div>
+  </div>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">MIN&nbsp;&nbsp;&nbsp;</pre><pre>-------</pre><pre>40000.0</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<h4 id="DatabasePrimer-Subqueries"><span style="color:black">Subqueries</span></h4>
+
+<p>Suppose we only have information on WORKER_CODE, i.e. 'CODE-1' and 'CODE-2'
+and we would like to find out what projects they are working on. To join table
+WORKER to table WORKER_PROJECT_MAP we need to have <a class="btn" href="http://worker.id/">WORKER.ID</a>
+and&nbsp;WORKER_PROJECT_MAP.WORKER_ID. However, we do not know values for <a class="btn" href="http://worker.id/">WORKER.ID</a>, we only know WORKER_CODE.</p>
+
+<p>Before we accomplish our final task, let's perform some intermediate steps,
+like joining three tables: PROJECT, WORKER, and PROJECT_WORKER_MAP.</p>
+
+<p class="MsoNormal"><img border="0" width="468" height="405" id="Picture 11" src="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/Database+Primer_files/image034.png"></p>
+
+<p>Note:</p>
+
+<p>Second command uses&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">order by</span></code>&nbsp;clause
+to sort results by&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">worker_name</span></code>&nbsp;field.</p>
+
+<p>However, for our current task, we don't have IDs of workers, we have&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">worker_code</span></code>. Thus, we need to use the
+worker_code to get to the <a class="btn" href="http://worker.id/">WORKER.ID</a>.</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="wide">
+ <colgroup><col style="width: 644.0px;"><col style="width: 316.0px;"></colgroup>
+ <tbody><tr>
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Query</b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;border-left:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Result</b></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">select p.project_name, w.worker_name</pre><pre>from project p, worker w, project_worker_map m</pre><pre>where m.project_id = p.id</pre><pre>and m.worker_id = w.id</pre><pre>and m.worker_id in (</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;select id from worker where worker_code in('CODE-1',&nbsp;'CODE-2')</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;)</pre></div>
+  </div>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">PROJECT_NAME&nbsp; WORKER_NAME</pre><pre>-------------------------</pre><pre>P-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One First&nbsp;</pre><pre>P-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Two Second</pre><pre>P-3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One First&nbsp;</pre><pre>P-3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Two Second</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p><span style="color:black">Note:</span></p>
+
+<p>We need to join three tables and define the filtering criteria</p>
+
+<p>We can combine this result with GROUP BY clause to determine the total
+compensation for these projects:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="wide">
+ <colgroup><col style="width: 602.0px;"><col style="width: 356.0px;"></colgroup>
+ <tbody><tr>
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Query</b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;border-left:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Result</b></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">select p.project_name, sum(w.compensation) as TotalComp</pre><pre>from project p, worker w, project_worker_map m</pre><pre>where m.project_id = p.id</pre><pre>and m.worker_id = w.id</pre><pre>and m.worker_id in (</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;select id from worker where worker_code in('CODE-1',&nbsp;'CODE-2')</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;)</pre><pre>group by p.project_name</pre></div>
+  </div>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">PROJECT_NAME&nbsp; TOTALCOMP</pre><pre>-----------------------</pre><pre>P-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120000.0</pre><pre>P-2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;240000.0</pre><pre>P-3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;360000.0</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<h1 id="DatabasePrimer-NextSteps"><span style="color:black">Next S</span>teps</h1>
+
+<p>The information presented so far does not even scratch the surface. There
+are things that you need to be aware of even though they are not demonstrated
+in this document.</p>
+
+<h2 id="DatabasePrimer-SQLStandards">SQL Standards</h2>
+
+<p>Like everything else, SQL went through a lot of iterations over many years.
+The SQL presented here follows the original SQL-86 format. I believe the latest
+is called SQL:2003. The syntax for SELECT commands has changed, however, the
+original syntax is still supported. Some operations differ by database
+providers. For example, to perform a left outer join (discussed shortly), you
+will need to adhere to the format of the database provider such as Oracle,
+Sybase, Postgres, DB2, etc.</p>
+
+<p>The main point is to understand what capabilities are possible. It is easy
+to find the syntax for a specific command on the internet.</p>
+
+<h2 id="DatabasePrimer-LEFTandRIGHTOUTERJOINS">LEFT and RIGHT OUTER JOINS</h2>
+
+<p>So far, the examples provided here used a standard, or "INNER"
+join. For example, we can join multiple tables using INNER join to see all
+projects and people who are assigned to them. Some projects may not have any
+people assigned. Suppose we want to see all projects. If people are assigned to
+them, we will see person name in the WORKER column. If a project has no workers
+assigned, that project will not appear in the response. Often, we want to see
+projects and workers assigned to them and also projects that have no workers.
+This is the job for a LEFT OUTER join. If no one is assigned&nbsp; to some
+project, the project will still appear but the value in the WORKER column will
+be null. RIGHT OUTER join is similar to LEFT OUTER join but works in the
+right-to-left order.</p>
+
+<h2 id="DatabasePrimer-SELFJOIN">SELF JOIN</h2>
+
+<p>Here is one of the most common problems for a SELF JOIN. Let's say we have a
+table of employees, along with their salaries and ID of the manager. Let's say
+our fictitious table looks like this:</p>
+
+<p class="MsoNormal"><img border="0" width="343" height="259" id="Picture 12" src="https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/Database+Primer_files/image023.png"></p>
+
+<p>We need to answer following question: "Provide a list on employees who
+make more money than their manager." From table's data we can observe that
+Employee IDs 1, 2 3, 4 all report to employee whose ID is 5. Only employee ID=4
+makes more money than his manager.</p>
+
+<p>This question comes up so often at interviews that I owe you a
+demonstration.</p>
+
+<p>Let's create a new table with data as shown above:</p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="wide">
+ <colgroup><col style="width: 158.0px;"><col style="width: 802.0px;"></colgroup>
+ <tbody><tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Create Table</b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;border-left:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">create table workerX (id integer not null, name varchar(255), compensation double not null, manager_id integer not null)</pre></div>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Populate</b></p>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">insert into workerX (id, name, compensation, manager_id) values (1, 'One First', 50000, 5)</pre><pre>insert into workerX (id, name, compensation, manager_id) values (2, 'Two Second', 70000, 5)</pre><pre>insert into workerX (id, name, compensation, manager_id) values (3, 'Three Third', 90000, 5)</pre><pre>insert into workerX (id, name, compensation, manager_id) values (4, 'Four Fourth', 180000, 5)</pre><pre>insert into workerX (id, name, compensation, manager_id) values (5, 'Five Fifth', 160000, 9)</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p><span style="color:black">Now we can execute a query to find all employees
+who make more money than their managers:</span></p>
+
+<div>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none" data-layout="wide">
+ <colgroup><col style="width: 540.0px;"><col style="width: 418.0px;"></colgroup>
+ <tbody><tr>
+  <td style="border:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Query</b></p>
+  </td>
+  <td style="border:solid windowtext 1.0pt;border-left:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <p align="center" style="text-align:center"><b>Result</b></p>
+  </td>
+ </tr>
+ <tr style="page-break-inside:avoid">
+  <td style="border:solid windowtext 1.0pt;border-top:none;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">select employee.*</pre><pre>from workerX employee, workerX manager</pre><pre>where employee.manager_id = </pre><pre>and employee.compensation &gt; manager.compensation</pre></div>
+  </div>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:3.75pt 3.75pt 3.75pt 3.75pt">
+  <div>
+  <div><pre data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">ID NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMPENSATION&nbsp; MANAGER_ID</pre><pre>----------------------------------------</pre><pre>4&nbsp;&nbsp;Four Fourth&nbsp;&nbsp;180000.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</pre></div>
+  </div>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p><span style="color:black">Note how use of aliases, employee and manager,
+were absolutely essential for a SELF JOIN query.</span></p>
+
+<h2 id="DatabasePrimer-UNIONS">UNIONS</h2>
+
+<p>There may be times when we would like to combine results from multiple
+tables. Our SELECT clause identifies fields and they datatype. As long as the
+fields in the SELECT clause match, data from multiple tables may be combined
+with a UNION command.</p>
+
+<h2 id="DatabasePrimer-StoredProcedures,Triggers,andTemporaryTables">Stored
+Procedures, Triggers, and Temporary Tables</h2>
+
+<p>SELECT command is extremely powerful and provides many clauses to wield
+incredible power. In addition to standard features of the SQL, each database
+provide furnishes a library of functions to works with strings, dates, and just
+about anything else. However, sometimes all this power is still not enough.
+There may be times when it would be useful to create intermediate results and
+stored them in the&nbsp; <code class="language-javascript"><span style="font-size:10.0pt">temp</span></code>&nbsp;table.
+Next, subsequent commands can me used in combination with data in the temp
+table to produce more elaborate answers.</p>
+
+<p>For anything that can't be done with SQL, there are stored procedures. Each
+database provider has its own programming language to interact with databases.
+A program written in this language is called the stored procedure. Some
+companies build their entire applications with stored procedures. In my view,
+this is a terrible idea but it may be justified for certain types of projects.
+One of the problems if stored procedures is that they can't be debugged. You
+may need tp place results of some intermediate computation into a table for
+debugging purposes.</p>
+
+<p>It is also important to realize that a stored procedure is often composed to
+several SQL statements without resorting to any other programming aspects. To
+support transactions, you will need to place your SQL commands inside the
+stored procedure.</p>
+
+<p>A Trigger is a stored procedure. It is triggered when a certain action
+occurs, such as inserting a new row or updating it. Some time ago, triggers
+where relied on very heavily, however, over the years they usefulness has
+diminished.</p>
+
+<h2 id="DatabasePrimer-TransactionsandRollBacks">Transactions and RollBacks</h2>
+
+<p>Let's say we have a site for taking customer orders. When the order is
+placed we need to update ORDERS table, INVENTORY table, and possible CUSTOMERS
+table to keep track of all the money they had spent on our crap.</p>
+
+<p>Say we update the ORDERS table first and then try to update the INVERTORY
+table, but that update fails. Now we have a system in an inconsistent state. To
+prevent this inconsistent state we need to ROLL-BACK our transaction. Thus,
+either all commands complete successfully or none at all.</p>
+
+<p>Failure to update the INVERNTORY table may happen for many diffident
+reasons, for example, the table may run out of storage space that was allocated
+for it.</p>
+
+</div>
+
+
+
+
+</body>
+<!-- Mirrored from goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/database+primer by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Jan 2021 01:43:53 GMT -->
+</html>

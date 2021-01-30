@@ -1,0 +1,242 @@
+HTTrack3.49-2 launched on Fri, 29 Jan 2021 20:18:35 at https://goofy-euclid-1cd736.netlify.app/
+(httrack -%e3 https://goofy-euclid-1cd736.netlify.app/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+20:19:25	Error: 	"Not Found" (404) at link https://cdn.jsdelivr.net/npm/@elastic/app-search-javascript@7.10.0/dist/elastic_app_search.umd.js (from https://goofy-euclid-1cd736.netlify.app/)
+20:19:25	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/jquery.swiftype.search.js (from https://goofy-euclid-1cd736.netlify.app/)
+20:19:25	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/javascripts/sentry.js (from https://goofy-euclid-1cd736.netlify.app/)
+20:22:37	Warning: 	Note: due to https://developer.mozilla.org remote robots.txt rules, links beginning with these path will be forbidden: /api/, /*docs/get-documents, /*docs/Experiment:*, /*$children, /*docs.json, /*/files/, /media, /*profiles*/edit, /en-US/search, /ar/search, /bg/search, /bm/search, /bn/search, /ca/search, /de/search, /el/search, /es/search, /fa/search, /fi/search, /fr/search, /he/search, /hi-IN/search, /hu/search, /id/search, /it/search, /ja/search, /kab/search, /ko/search, /ms/search, /my/search, /nl/search, /pl/search, /pt-PT/search, /pt-BR/search, /ru/search, /sv-SE/search, /th/search, /tr/search, /uk/search, /vi/search, /zh-CN/search, /zh-TW/search (see in the options to disable this)
+20:22:37	Warning: 	Moved Temporarily for https://developer.mozilla.org/
+20:22:37	Warning: 	File has moved from https://developer.mozilla.org/ to /en-US/
+20:22:55	Warning: 	Found for https://www.instagram.com/p/Bxh6moVlBGX/?utm_source=ig_embed&utm_campaign=loading
+20:22:55	Warning: 	File has moved from https://www.instagram.com/p/Bxh6moVlBGX/?utm_source=ig_embed&utm_campaign=loading to https://www.instagram.com/accounts/login/
+20:22:57	Warning: 	Retry after error 500 (Internal Server Error) at link gist-it.appspot.com/https://github.com/bgoonz/weeks.git (from https://goofy-euclid-1cd736.netlify.app/)
+20:22:57	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/images/favicon.ico (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:22:57	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/images/apple-touch-icon.png (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:23:18	Error: 	"Request denied" (999) at link https://www.linkedin.com/in/bryan-guner-046199128/ (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:04	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-13.html (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:04	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-14.html (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:04	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-15.html (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:04	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-16.html (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:04	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-17.html (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:04	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-18.html (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:04	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-19.html (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:04	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-20.html (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:04	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-21.html (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:04	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-22.html (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:04	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-23.html (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:04	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-24.html (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:05	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/upload/course_01.jpg (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:09	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/thank-you/ (from https://goofy-euclid-1cd736.netlify.app/core-site/page-contact.html)
+20:29:14	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/assets/prism.css (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:14	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/assets/style.css (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:14	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/assets/prism.js (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:14	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200824-intro.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:14	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200826-op.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:14	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200828-ex.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:14	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200831-ex_b.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:14	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200902-raii.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:14	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200904-iter.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:14	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200909-iter_b.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:14	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200911-excep.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:14	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200914-recurse.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200916-search.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200918-recurse_iter.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200921-recurse_elim.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200923-backtrack.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200925-analysis.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200928-comp1.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20200930-comp2.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201002-comp3.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201005-comp3_b.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201007-sort_stl.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201012-data_abst.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201014-array_impl.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:15	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201016-excep_safe.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201019-excep_safe_b.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201021-generic.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201023-node.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201026-seq_stl.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201028-stack.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201030-queue.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201102-bintree.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201104-table.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201106-heapalg.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201109-heapalg_b.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201111-tree23.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201113-tree23_b.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201116-hash.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201118-hash_b.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201120-table_stl.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201123-extern.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201130-graph_traverse.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/data-structures/cs311-20201202-span_tree.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/database (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/database/mysql_cheat_sheet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/database/MySQL_QuickRef.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:16	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/engineering (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/engineering/Laplace_Table.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/git (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/git/git-cheat-sheet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/git/Git_Quick_Reference.2011-09-04.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/html (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/html/html-cheat-sheet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/html/HTML-XHTML_Tag_Sheet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/html/html1_quickref.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/html/HTML5_Canvas_Cheat_Sheet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/html/Locators_groups_1_0_2.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/html/Locators_table_1_0_2.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/html/ZenCodingCheatSheet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/java (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/java/JAVA (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/java/java_quickref.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/javascript (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/javascript/javascript_cheat_sheet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:17	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/javascript/jQuery-1.5-Visual-Cheat-Sheet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/javascript/JSB6RefBooklet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/javascript/jsquick.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/linux (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/linux/fwunixref.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/linux/linux_quickref.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/A-Cheat-Sheet-of-Maths.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Algebra_Cheat_Sheet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Algebra_Cheat_Sheet_Reduced.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Calculus_Cheat_Sheet_All_Reduced (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Calculus_Cheat_Sheet_All_Reduced.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Calculus_Cheat_Sheet_Derivatives_Reduced (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Calculus_Cheat_Sheet_Derivatives_Reduced.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Calculus_Cheat_Sheet_Integrals_Reduced (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Calculus_Cheat_Sheet_Integrals_Reduced.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Calculus_Cheat_Sheet_Limits_Reduced (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Calculus_Cheat_Sheet_Limits_Reduced.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Common_Derivatives_Integrals_Reduced (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Common_Derivatives_Integrals_Reduced.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/ess-reviewofalgebra.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/ineq.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/Jones-mathcheatsheet2008.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/math/MATH.CHEAT.SHEET---too.cool.and.imp--MUST.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:18	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/misc (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/misc/Flash_ActionScript_quickref.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/misc/Intel.x86-64.Architecture.2012011000.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/misc/IntelCodeTable.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/python (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/python/PQRC-2.4-A4-latest.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/ruby (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/ruby/Ruby (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/ruby/RubyCheat.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/web (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/web/mod_rewrite_cheat_sheet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/web/php_cheat_sheet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/web/SmartyCheatSheet.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:29:19	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/web/svn-refcard.pdf (from https://goofy-euclid-1cd736.netlify.app/2-content/core-content/cheat-sheets/pdf/index.html)
+20:31:44	Warning: 	Found for https://www.npmjs.com/policies/
+20:31:44	Warning: 	File has moved from https://www.npmjs.com/policies/ to /policies
+20:32:01	Error: 	"Not Found" (404) at link https://www.npmjs.com/package/minicssextractbug.b834ad825385b89238cb.js (from https://www.npmjs.com/)
+20:32:01	Error: 	"Unknown error" (429) at link https://www.instagram.com/accounts/login/ (from https://www.instagram.com/p/Bxh6moVlBGX/?utm_source=ig_embed&utm_campaign=loading)
+20:32:01	Warning: 	Retry after error 500 () at link gist-it.appspot.com/https://github.com/bgoonz/weeks.git (from https://goofy-euclid-1cd736.netlify.app/)
+20:32:01	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/css/owl.video.play.png (from https://goofy-euclid-1cd736.netlify.app/core-site/css/carousel.css)
+20:32:01	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/images/pattern.png (from https://goofy-euclid-1cd736.netlify.app/core-site/style.css)
+20:32:01	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/upload/formbg.jpg (from https://goofy-euclid-1cd736.netlify.app/core-site/style.css)
+20:37:30	Error: 	Exit requested by shell or user
+20:37:32	Warning: 	File not added due to mirror cancel: https://github.com/topics/javascript
+20:37:39	Warning: 	Retry after error 502 (Bad Gateway) at link https://github.com/ImgBotApp (from https://github.com/bgoonz)
+20:37:39	Warning: 	Link https://github.com/bgoonz/web-dev-notes-resource-site/pull/45 not scanned (follow robots meta tag)
+20:37:39	Warning: 	Link https://github.com/bgoonz/web-dev-notes-resource-site/pull/46 not scanned (follow robots meta tag)
+20:37:39	Warning: 	Link https://github.com/bgoonz/web-dev-notes-resource-site/pull/44 not scanned (follow robots meta tag)
+20:37:39	Warning: 	Link https://github.com/bgoonz/web-dev-notes-resource-site/pull/43 not scanned (follow robots meta tag)
+20:37:39	Warning: 	Link https://github.com/bgoonz/blog-research/pull/25 not scanned (follow robots meta tag)
+20:37:39	Warning: 	Link https://github.com/bgoonz/Directory-Structure-Browser/pull/114 not scanned (follow robots meta tag)
+20:37:40	Error: 	"Not Found" (404) at link https://www.pinterest.com/bryanguner/ios-app://429047995/pinterest/user/bryanguner (from https://www.pinterest.com/bryanguner/)
+20:37:40	Error: 	"Not Found" (404) at link https://www.pinterest.com/bryanguner/android-app://com.pinterest/pinterest/user/bryanguner (from https://www.pinterest.com/bryanguner/)
+20:37:41	Warning: 	Moved Temporarily for https://www.pinterest.com/bryanguner/livi.fr/sante/
+20:37:41	Warning: 	File has moved from https://www.pinterest.com/bryanguner/livi.fr/sante/ to https://www.pinterest.com/bryanguner/livi.fr/
+20:37:41	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/repo-min.js (from https://goofy-euclid-1cd736.netlify.app/core-site/index.html)
+20:37:41	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/repo.js (from https://goofy-euclid-1cd736.netlify.app/core-site/index.html)
+20:37:42	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/img/videoframe.jpg (from https://goofy-euclid-1cd736.netlify.app/core-site/index.html)
+20:37:42	Warning: 	File not added due to mirror cancel: https://mail.google.com/robots.txt
+20:37:42	Warning: 	Moved Temporarily for https://mail.google.com/mail/u/0/h/
+20:37:42	Warning: 	File has moved from https://mail.google.com/mail/u/0/h/ to https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/h/1qjdghbqsjgvx/&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1#
+20:37:42	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/upload/course_01.pgj (from https://goofy-euclid-1cd736.netlify.app/core-site/index.html)
+20:43:44	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/output.html (from https://goofy-euclid-1cd736.netlify.app/core-site/index.html)
+20:43:45	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/other-pages/blog-post (from https://goofy-euclid-1cd736.netlify.app/core-site/index.html)
+20:43:45	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/0-assets/videos/playing-4-change.mp4 (online-video-cutter.com).mp4 (from https://goofy-euclid-1cd736.netlify.app/core-site/index.html)
+20:43:46	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/images/favicon.ico (from https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-1.html)
+20:43:46	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/images/apple-touch-icon.png (from https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-1.html)
+20:43:46	Warning: 	File not added due to mirror cancel: https://quizlet.com/robots.txt
+20:43:46	Error: 	"Forbidden" (403) at link https://quizlet.com/519020363/match/embed?x=1jj1 (from https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-1.html)
+20:43:46	Warning: 	File not added due to mirror cancel: https://repl.it/robots.txt
+20:43:51	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/pseudo-elements.png (from https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-9.html)
+20:43:51	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/ajax.svg (from https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-9.html)
+20:43:53	Warning: 	File https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10/database+primer converted from UCS2 to UTF-8 (old size: 120962 bytes, new size: 60483 bytes)
+20:43:53	Warning: 	File not added due to mirror cancel: https://www.postgresqltutorial.com/robots.txt
+20:43:53	Warning: 	Moved Permanently for https://www.postgresqltutorial.com/postgresql-stored-procedures/
+20:43:53	Warning: 	File has moved from https://www.postgresqltutorial.com/postgresql-stored-procedures/ to https://www.postgresqltutorial.com/postgresql-create-procedure/
+20:43:57	Warning: 	Moved Permanently for https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-except/
+20:43:57	Warning: 	File has moved from https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-except/ to https://www.postgresqltutorial.com/postgresql-except/
+20:43:57	Warning: 	File not added due to mirror cancel: https://www.toptal.com/robots.txt
+20:43:57	Warning: 	File not added due to mirror cancel: https://99designs.com/robots.txt
+20:43:57	Warning: 	File not added due to mirror cancel: https://fonts.google.com/robots.txt
+20:43:57	Warning: 	File not added due to mirror cancel: https://blog.designcrowd.com/robots.txt
+20:43:57	Error: 	"Forbidden" (403) at link https://blog.designcrowd.com/article/867/understanding-the-hierarchy-of-text (from https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10.html)
+20:43:57	Warning: 	File not added due to mirror cancel: https://webaim.org/robots.txt
+20:43:57	Warning: 	File not added due to mirror cancel: https://www.abeautifulsite.net/robots.txt
+20:43:57	Warning: 	File not added due to mirror cancel: https://www.producthunt.com/robots.txt
+20:43:58	Warning: 	File not added due to mirror cancel: https://www.postgresql.org/robots.txt
+20:43:58	Warning: 	File not added due to mirror cancel: https://www.enterprisedb.com/robots.txt
+20:43:58	Warning: 	File not added due to mirror cancel: https://en.wikipedia.org/robots.txt
+20:43:58	Warning: 	File not added due to mirror cancel: www.w3.org/robots.txt
+20:43:59	Warning: 	File not added due to mirror cancel: https://gist.github.com/robots.txt
+20:43:59	Warning: 	File not added due to mirror cancel: www.postgresqltutorial.com/robots.txt
+20:43:59	Warning: 	Moved Permanently for www.postgresqltutorial.com/postgresql-data-types/
+20:43:59	Warning: 	Redirected link is identical because of 'URL Hack' option: www.postgresqltutorial.com/postgresql-data-types/ and https://www.postgresqltutorial.com/postgresql-data-types/
+20:43:59	Warning: 	File has moved from www.postgresqltutorial.com/postgresql-data-types/ to https://www.postgresqltutorial.com/postgresql-data-types/
+20:43:59	Warning: 	Moved Permanently for www.postgresqltutorial.com/postgresql-boolean/
+20:43:59	Warning: 	Redirected link is identical because of 'URL Hack' option: www.postgresqltutorial.com/postgresql-boolean/ and https://www.postgresqltutorial.com/postgresql-boolean/
+20:43:59	Warning: 	File has moved from www.postgresqltutorial.com/postgresql-boolean/ to https://www.postgresqltutorial.com/postgresql-boolean/
+20:43:59	Warning: 	File not added due to mirror cancel: https://sqlzoo.net/robots.txt
+20:44:00	Warning: 	Retry after error -4 (No data (connection closed)) at link www.postgresqltutorial.com/postgresql-explain/ (from https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10.html)
+20:44:00	Warning: 	File not added due to mirror cancel: https://www.essentialsql.com/robots.txt
+20:44:01	Warning: 	File not added due to mirror cancel: https://www.node-postgres.com/robots.txt
+20:44:01	Warning: 	Moved Permanently for https://www.node-postgres.com/
+20:44:01	Warning: 	Redirected link is identical because of 'URL Hack' option: https://www.node-postgres.com/ and https://node-postgres.com/
+20:44:01	Warning: 	File has moved from https://www.node-postgres.com/ to https://node-postgres.com/
+20:44:01	Warning: 	File not added due to mirror cancel: https://node-postgres.com/robots.txt
+20:44:01	Warning: 	File not added due to mirror cancel: https://www.expressjs.com/robots.txt
+20:44:01	Warning: 	Moved Permanently for https://www.expressjs.com/
+20:44:01	Warning: 	Redirected link is identical because of 'URL Hack' option: https://www.expressjs.com/ and expressjs.com/
+20:44:01	Warning: 	File has moved from https://www.expressjs.com/ to http://expressjs.com/
+20:44:01	Warning: 	File not added due to mirror cancel: https://pugjs.org/robots.txt
+20:44:01	Warning: 	File not added due to mirror cancel: https://sequelize.org/robots.txt
+20:44:02	Warning: 	File not added due to mirror cancel: https://codewithhugo.com/robots.txt
+20:44:02	Error: 	"Not Found" (404) at link https://sequelize.org/master/class/lib/query-interface.js~QueryInterface.html (from https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10.html)
+20:44:06	Error: 	"Not Found" (404) at link https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/index.html (from https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-12.html)
+20:44:18	Error: 	"Not Found" (404) at link https://developer.mozilla.org/static/ (from https://developer.mozilla.org/en-US/)
+20:44:20	Warning: 	Found for https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2F
+20:44:20	Warning: 	File has moved from https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2F to https://github.com/login/oauth/authorize?client_id=21df88df73c82ea9fd75&redirect_uri=https%3A%2F%2Fdeveloper.mozilla.org%2Fusers%2Fgithub%2Flogin%2Fcallback%2F&scope=user%3Aemail&response_type=code&state=mJ8JdNPzG4z7
+20:44:20	Warning: 	Found for https://developer.mozilla.org/users/google/login/?next=%2Fen-US%2F
+20:44:20	Warning: 	File has moved from https://developer.mozilla.org/users/google/login/?next=%2Fen-US%2F to https://accounts.google.com/o/oauth2/auth?client_id=747257600495-s4si5la20h4etoqmmu4isshkfc6vvpkm.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fdeveloper.mozilla.org%2Fusers%2Fgoogle%2Flogin%2Fcallback%2F&scope=email+profile&response_type=code&state=qBdXhBnDKHR4
+20:44:20	Error: 	"Not Found" (404) at link https://www.npmjs.com/products/minicssextractbug.b834ad825385b89238cb.js (from https://www.npmjs.com/products/pro)
+20:44:22	Warning: 	Link https://www.npmjs.com/cdn-cgi/l/email-protection not scanned (follow robots meta tag)
+20:44:22	Error: 	"Not Found" (404) at link https://www.npmjs.com/policies/{} (from https://www.npmjs.com/policies/terms)
+20:44:22	Error: 	"Not Found" (404) at link https://www.npmjs.com/policies/minicssextractbug.b834ad825385b89238cb.js (from https://www.npmjs.com/policies/terms)
+20:44:23	Error: 	"" (500) after 2 retries at link gist-it.appspot.com/https://github.com/bgoonz/weeks.git (from https://goofy-euclid-1cd736.netlify.app/)
+20:44:23	Error: 	"Not Found" (404) at link https://github.com/signup_check/username?suggest_usernames=true (from https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E&source=header)
+20:44:23	Error: 	"Not Found" (404) at link https://github.com/signup_check/email (from https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E&source=header)
+20:44:23	Error: 	"Not Found" (404) at link https://github.com/users/password (from https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E&source=header)
+20:44:25	Error: 	"Not Found" (404) at link https://github.com/actions/zeit-now (from https://github.com/features/actions)
+20:44:38	Error: 	"Not Found" (404) at link https://github.com/berty/berty/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22 (from https://github.com/explore)
+20:44:38	Error: 	"Not Found" (404) at link https://github.com/berty/berty/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22 (from https://github.com/explore)
+20:44:38	Error: 	"Not Found" (404) at link https://github.com/berty/berty/issues?q=is%3Aopen+is%3Aissue+label%3At%2Fjs (from https://github.com/explore)
+20:44:42	Error: 	"Not Found" (404) at link https://github.com/yuchenlin/rebiber/issues?q=is%3Aopen+is%3Aissue+label%3Abib-files (from https://github.com/explore)
+20:44:42	Error: 	"Not Found" (404) at link https://github.com/yuchenlin/rebiber/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22 (from https://github.com/explore)
+20:44:47	Warning: 	File not added due to mirror cancel: https://github.com/ImgBotApp
+20:44:47	Error: 	"mirror stopped by user" (-1) at link https://github.com/ImgBotApp (from https://github.com/bgoonz)
+20:44:47	Warning: 	File not added due to mirror cancel: www.postgresqltutorial.com/postgresql-explain/
+20:44:47	Error: 	"mirror stopped by user" (-1) at link www.postgresqltutorial.com/postgresql-explain/ (from https://goofy-euclid-1cd736.netlify.app/core-site/other-pages/weeks/week-10.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 26 minutes 12 seconds : 1094 links scanned, 878 files written (125207840 bytes overall) [39563081 bytes received at 25167 bytes/sec], 116032460 bytes transferred using HTTP compression in 965 files, ratio 22%, 1.8 requests per connection
+(160 errors, 71 warnings, 0 messages)

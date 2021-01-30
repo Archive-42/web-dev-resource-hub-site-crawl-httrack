@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from webaim.org/resources/contrastchecker/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Jan 2021 01:43:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>WebAIM: Contrast Checker</title>
+	<link rel="shortcut icon" href="https://webaim.org/media/favicon.ico">
+	<link rel="home" href="https://webaim.org/">
+	<link rel="search" href="https://webaim.org/search/">
+	<link rel="alternate" href="https://webaim.org/blog/feed" type="application/rss+xml" title="WebAIM Blog">
+	
+	<link href="https://webaim.org/styles/main.css" rel="stylesheet" type="text/css">
+	<link href="https://webaim.org/styles/print.css" rel="stylesheet" type="text/css" media="print">
+	<script src="https://webaim.org/media/scripts/jquery.js"></script>
+	<script src="https://webaim.org/media/scripts/main.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Kameron:400,700' rel='stylesheet' type='text/css'>
+	<link href="https://webaim.org/styles/documents.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+<link rel="stylesheet" href="https://webaim.org/resources/contrastchecker/contrast.css">
+		<script src="https://webaim.org/resources/contrastchecker/contrast.js"></script>
+		<script>
+			function initialize() {
+				f = '#0000FF', b = '#FFFFFF';
+				update();
+			}
+		</script>
+	
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="headcontainer" class="clearfix" style="background-image: url(https://webaim.org/media/banners/resources.jpg)">
+<header>
+	<div id="skiptocontent"><a href="#maincontent">skip to main content</a></div>
+	
+	<h2><a href="https://webaim.org/"><img src="https://webaim.org/media/logo.png" width="302" height="80" alt="WebAIM - Web Accessibility In Mind"></a></h2>
+
+	<nav>
+		<h2 class="hidden">Main Navigation</h2>
+		<ul>
+			<li><a href="https://webaim.org/services/">Services</a></li>
+			<li><a href="https://webaim.org/articles/">Articles</a></li>
+			<li class="current"><a href="https://webaim.org/resources/">Resources</a></li>
+			<li><a href="https://webaim.org/projects/">Projects</a></li>
+			<li><a href="https://webaim.org/community/">Community</a></li>
+		</ul>
+	</nav>
+	<div id="search">
+		<form method="get" role="search" action="https://webaim.org/search/" id="sitesearch">
+			<p class="search"><span><label for="q">Search:</label> <input type="text" name="q" id="q"><input type="image" src="https://webaim.org/media/template/search.svg" alt="Submit Search"></span></p>
+		</form>
+		
+		<p class="intro"><a href="https://webaim.org/intro">Introduction to Web Accessibility</a></p>
+		
+		<p class="training"><a href="https://webaim.org/training">WebAIM Training</a></p>
+	</div>
+
+</header>
+</div>
+
+<main id="maincontainer" class="clearfix">
+
+<article id="maincontent">
+
+<h1>Contrast Checker</h1>
+
+<p id="breadcrumbs"><span class="hidden">You are here: </span><a href="https://webaim.org/">Home</a> &gt; <a href="https://webaim.org/resources/">Resources</a> &gt; Contrast Checker</p>
+
+<div class="section">
+	<noscript>
+		<p><strong>This tool requires Javascript.</strong></p>
+	</noscript>
+	<form id="contrastForm">
+		<fieldset>
+			<legend>Foreground Color</legend>
+			<p class="error" id="fError">Please enter a valid <a href="http://en.wikipedia.org/wiki/Web_colors#Hex_triplet">hex triplet</a>, or use the color picker.</p>
+			<label for="fHex" class="hidden">Hex</label>
+			<input id="fHex" type="text" maxlength="7" required>
+			<label for="fPick" class="hidden">color picker</label>
+			<input id="fPick" type="color">
+			<div>
+				<label for="fLightness">Lightness</label>
+				<input id="fLightness" type="range" min="0" max="100" step="1">
+				<div class="gradient"></div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Background Color</legend>
+			<p class="error" id="bError">Please enter a valid <a href="http://en.wikipedia.org/wiki/Web_colors#Hex_triplet">hex triplet</a>, or use the color picker.</p>
+			<label for="bHex" class="hidden">Hex</label>
+			<input id="bHex" type="text" maxlength="7" required>
+			<label for="bPick" class="hidden">color picker</label>
+			<input id="bPick" type="color">
+			<div>
+				<label for="bLightness">Lightness</label>
+				<input id="bLightness" type="range" min="0" max="100" step="1">
+				<div class="gradient"></div>
+			</div>
+		</fieldset>
+	</form>
+	<div id="ratioContainer">
+		<span>
+			Contrast Ratio
+			<span id="ratio" aria-live="polite" aria-atomic="false"></span>
+		</span>
+		<a id="permalink" class="permalink" href="https://webaim.org/resources/contrastchecker/?fcolor=0000FF&amp;bcolor=FFFFFF">permalink</a>
+	</div>
+	<h2>Normal Text</h2>
+	<div class="results">
+		<p>WCAG AA: <span id="normalAA"></span></p>
+		<p>WCAG AAA: <span id="normalAAA"></span></p>
+	</div>
+	<span id="normal">The five boxing wizards jump quickly.</span>
+	<h2>Large Text</h2>
+	<div class="results">
+		<p>WCAG AA: <span id="bigAA"></span></p>
+		<p>WCAG AAA: <span id="bigAAA"></span></p>
+	</div>
+	<span id="big">The five boxing wizards jump quickly.</span>
+	<h2>Graphical Objects and User Interface Components</h2>
+	<div class="results">
+		<p>WCAG AA: &nbsp;<span id="uiAA"></span></p>
+	</div>
+	<span id="ui">
+	<svg
+   width="19.21315"
+   height="18.294994"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45"
+   sodipodi:modified="true"
+   version="1.0">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.9195959"
+     inkscape:cx="17.757032"
+     inkscape:cy="7.298821"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="984"
+     inkscape:window-height="852"
+     inkscape:window-x="148"
+     inkscape:window-y="66" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-192.905,-516.02064)">
+    <path
+       style="fill:#000000"
+       d="M 197.67968,534.31563 C 197.40468,534.31208 196.21788,532.53719 195.04234,530.37143 L 192.905,526.43368 L 193.45901,525.87968 C 193.76371,525.57497 194.58269,525.32567 195.27896,525.32567 L 196.5449,525.32567 L 197.18129,527.33076 L 197.81768,529.33584 L 202.88215,523.79451 C 205.66761,520.74678 208.88522,517.75085 210.03239,517.13691 L 212.11815,516.02064 L 207.90871,520.80282 C 205.59351,523.43302 202.45735,527.55085 200.93947,529.95355 C 199.42159,532.35625 197.95468,534.31919 197.67968,534.31563 z "
+       id="path2223" />
+  </g>
+</svg><br>
+
+	<input type="text" id="uibox" value="Text Input"> 
+
+	</span>
+	
+	<h2>Explanation</h2>
+	<p>Enter a foreground and background color in RGB hexadecimal format (e.g., #FD3 or #F7DA39) or choose a color using the color picker. The Lightness slider can be used to adjust the selected color.</p>
+	<p>WCAG 2.0 level AA requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text. WCAG 2.1 requires a contrast ratio of at least 3:1 for graphics and user interface components (such as form input borders). WCAG Level AAA requires a contrast ratio of at least 7:1 for normal text and 4.5:1 for large text.</p>
+	<p>Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger.</p>
+	<p><strong>Hint:</strong> <a href="http://www.colorzilla.com/firefox/">Colorzilla</a> is an excellent tool for extracting the color value from any page element. Additionally, <a href="http://wave.webaim.org/">WAVE</a> can analyze contrast ratios for all page text elements at once.</p>
+	<p>Use <a href="https://webaim.org/resources/linkcontrastchecker/">our link contrast checker</a> to evaluate links that are identified using color alone.</p>
+	
+	<div class="note">
+		<div class="title">New!</div>
+		<p>This tool also functions as a basic API. Simply append <code>&amp;api</code> to any <a class="permalink" href="https://webaim.org/resources/contrastchecker/?fcolor=0000FF&amp;bcolor=FFFFFF">permalink</a> to get a JSON object with the contrast ratio and the AA/AAA pass/fail states. For example: <a class="apilink" href="https://webaim.org/resources/contrastchecker/?fcolor=FF0000&amp;bcolor=FFFFFF&amp;api">https://webaim.org/resources/contrastchecker/?fcolor=FF0000&bcolor=FFFFFF&api</a>.</p>
+	</div>
+	
+</div>
+
+</article>
+<aside id="articlemeta">
+
+	
+		
+				<div id="related">
+			<h2>Related Resources</h2>
+			<ul>
+			<li><a href="https://webaim.org/articles/contrast/">Contrast and Color Accessibility</a></li>
+<li><a href="https://webaim.org/resources/evalquickref/">Quick Reference: Testing Web Content for Accessibility</a></li>
+<li><a href="https://webaim.org/resources/designers/">Web Accessibility for Designers</a></li>
+<li><a href="https://webaim.org/resources/linkcontrastchecker/">Link Contrast Checker</a></li>
+			</ul>
+		</div>
+		
+</aside>
+</main>
+
+<footer>
+	<div id="footerresources">
+		<div class="footerblock">
+			<p id="copyright"><span class="hidden">&copy; </span>2021 WebAIM</p>
+			<p id="contact">Center for Persons with Disabilities<br>
+			Utah State University<br>
+			6807 Old Main Hill<br>
+			Logan, UT 84322-6807<br>
+			<a class="phone" href="tel:4357977024">435.797.7024</a></p>
+		</div>
+		<div class="footerblock">
+			<h2 id="blog">From the Blog</h2>
+			<ul><li><a href="https://webaim.org/blog/wave-3-1-release/">WAVE 3.1 Release</a></li><li><a href="https://webaim.org/blog/wcag-2-2-overview-and-feedback/">WCAG 2.2 Overview and Feedback</a></li><li><a href="https://webaim.org/blog/anniversaries-celebrated/">Anniversaries Celebrated</a></li><li><a href="https://webaim.org/blog/wave-webinar-and-intro-video/">WAVE Webinar and Intro Video</a></li><li><a href="https://webaim.org/blog/webaim-million-one-year-update/">WebAIM Million - One Year Update</a></li></ul>		</div>
+		<div class="footerblock">
+			<h2 id="popular">Popular Resources</h2>
+			<ul>
+				<li><a href="https://webaim.org/training/virtual">WebAIM Training</a></li>
+				<li><a href="https://webaim.org/standards/wcag/checklist">WCAG 2 Checklist</a></li>
+				<li><a href="https://webaim.org/newsletter">WebAIM Monthly Newsletter</a></li>
+				<li><a href="https://webaim.org/resources/contrastchecker">Color Contrast Checker</a></li>
+				<li><a href="https://webaim.org/resources/designers/">Web Accessibility for Designers</a></li>
+				<li><a href="http://wave.webaim.org/">WAVE Web Accessibility Evaluation Tool</a></li>
+			</ul>
+		</div>
+		
+		<div class="footerblock" id="checkpage">
+						<h2>Check Your Accessibility</h2>
+			<form action="https://wave.webaim.org/report" novalidate>
+				<label for="waveurl" class="hidden">Web site address</label>
+				<input type="url" id="waveurl" name="url" placeholder="Web site address" title="Web site address">
+				<input type="submit" value="WAVE">
+			</form>
+					</div>
+		
+		<div id="footerlinks">
+			<ul>
+				<li><a id="footercontact" href="https://webaim.org/contact">Contact</a></li>
+				<li><a id="footerabout" href="https://webaim.org/about">About</a></li>
+				<li><a id="footerrss" href="https://webaim.org/community/rss">RSS Feeds</a></li>
+				<li><a id="footertwit" href="http://twitter.com/webaim">Twitter</a></li>
+				<li><a id="footercopyright" href="https://webaim.org/copyright">Copyright &amp; Terms of Use</a></li>
+			</ul>
+		</div>
+		
+		<div class="clear"></div>
+	</div>
+
+</footer>
+
+<script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-302059-1']);
+	_gaq.push(['_trackPageview']);
+	
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+</body>
+
+<!-- Mirrored from webaim.org/resources/contrastchecker/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Jan 2021 01:43:57 GMT -->
+</html>
