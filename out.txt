@@ -1,0 +1,35 @@
+Dupe 1 found:
+package-lock.json
+Equal to:
+package-lock.json
+
+Dupe 2 found:
+right.html
+Equal to:
+right.html
+
+Dupe 3 found:
+left.html
+Equal to:
+left.html
+
+Dupe 4 found:
+directory.html
+Equal to:
+directory.html
+
+Dupe 5 found:
+dupe.js
+Equal to:
+dupe.js
+
+Dupe 6 found:
+out.txt
+Equal to:
+out.txt
+
+Dupe 7 found:
+package.json
+Equal to:
+package.json
+
